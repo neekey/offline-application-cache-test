@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US" manifest="cacheControl.manifest.php">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../assets/log.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css.php"/>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="box.css.php"/>
+</head>
+<body>
+hell
+<ul>
+    <li>cacheControl对缓存更新的影响：index.css.php缓存20s，box.css.php禁用缓存</li>
+    <li>尝试在20s内同时修改index.css.php和box.css.php的颜色，并更新manifest，刷新2次页面，方块和页面都变色说明资源的更新不受cache-control影响</li>
+    <li>若上一步骤页面不变色，说明受到cache-control影响，继续验证：20s后再次尝试更新manifest，刷新页面2次可以看到页面颜色变更</li>
+</ul>
+<img src="http://gtms01.alicdn.com/tps/i1/T1ZQ6wFidXXXcsoO3o-320-245.png">
+<div class="box" style="width: 100px; height: 100px;">
+</div>
+</body>
+</html>
